@@ -1,0 +1,29 @@
+@startuml
+
+class Item{
++ name
++ sellIn
++ quality
+}
+
+class GlidedRose {
+GlidedRose(items[], defaultItemUpdater)
+addItemUpdater(itemUpdater)
+updateQuality()
+}
+
+interface ItemUpdater {
++ updateItemQuality(item)
+}
+
+GlidedRose o--> Item: items
+GlidedRose o-right-> ItemUpdater: updaters
+
+class DefaultItemUpdater --|> ItemUpdater
+
+
+class OldAlcoholItemUpdater ---|> DefaultItemUpdater
+class TimelessItemUpdater ---|> DefaultItemUpdater
+class IncreasingValueItemUpdater ---|> DefaultItemUpdater
+class FastQualityDropItemUpdater ---|> DefaultItemUpdater
+@enduml
