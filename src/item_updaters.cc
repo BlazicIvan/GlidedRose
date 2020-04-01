@@ -25,3 +25,8 @@ void OldAlcoholItemUpdater::updateItem(Item& item)
         }
     }
 }
+
+void TimelessItemUpdater::updateItem(Item& item)
+{
+
+}
