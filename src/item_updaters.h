@@ -10,4 +10,11 @@ public:
     void updateItem(Item& item) override;
 };
 
+class OldAlcoholItemUpdater : public DefaultItemUpdater
+{
+public:
+    ~OldAlcoholItemUpdater() {};
+    void updateItem(Item& item) override;
+}
+
 #endif
