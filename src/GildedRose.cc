@@ -1,7 +1,19 @@
 #include "GildedRose.h"
 
-GildedRose::GildedRose(vector<Item> & items) : items(items)
-{}
+GildedRose::GildedRose(std::vector<Item> & items, ItemUpdater& updater) : items(items)
+{
+    updaters.insert(std::pair<std::string, ItemUpdater&>("", updater));
+}
+
+void GildedRose::addExceptionalUpdater(std::string name, ItemUpdater& updater)
+{
+
+}
+
+std::vector<Item>& GildedRose::getAllItems()
+{
+    return items;
+}
     
 void GildedRose::updateQuality() 
 {

@@ -1,10 +1,14 @@
 #include <gtest/gtest.h>
 #include "GildedRose.h"
+#include "item_updaters.h"
 
 TEST(GildedRoseTest, Foo) {
-    vector<Item> items;
+    std::vector<Item> items;
     items.push_back(Item("Foo", 0, 0));
-    GildedRose app(items);
+    DefaultItemUpdater defaultUpdater = DefaultItemUpdater();
+    GildedRose app(items, defaultUpdater);
     app.updateQuality();
-    EXPECT_EQ("Foo", app.items[0].name);
+    
+    std::vector<Item>& appItems = app.getAllItems();
+    EXPECT_EQ("Foo", appItems[0].name);
 }
