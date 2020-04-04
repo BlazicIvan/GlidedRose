@@ -22,8 +22,7 @@ TEST(GildedRoseApprovalTests, VerifyCombinations) {
 
     auto f = [](std::string name, int sellIn, int quality) {
         std::vector<Item> items = {Item(name, sellIn, quality)};
-        DefaultItemUpdater defaultUpdater = DefaultItemUpdater();
-        GildedRose app(items, defaultUpdater);
+        GildedRose app(items);
         app.updateQuality();
         return items[0];
     };
