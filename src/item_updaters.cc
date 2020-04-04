@@ -13,7 +13,7 @@ void DefaultItemUpdater::updateItem(Item& item)
     }
 }
 
-void OldAlcoholItemUpdater::updateItem(Item& item)
+void IncreasingQualityItemUpdater::updateItem(Item& item)
 {
     if (item.quality < 50)
     {
