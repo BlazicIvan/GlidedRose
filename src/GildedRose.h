@@ -24,19 +24,16 @@ public:
     virtual void updateItem(Item& item) = 0;
 };
 
+
 class GildedRose
 {
 private:
-    std::vector<Item> & items;
-    std::map<std::string, ItemUpdater&> updaters;
+    std::map<std::string, ItemUpdater*> mUpdaters;
 
 public:
-
-    GildedRose(std::vector<Item> & items, ItemUpdater& defaultUpdater);
-
-    void addExceptionalUpdater(std::string name, ItemUpdater& updater);
-
-    std::vector<Item>& getAllItems();
+    std::vector<Item> & items;
+    GildedRose(std::vector<Item> & items);
+    ~GildedRose();
     
     void updateQuality();
 };
