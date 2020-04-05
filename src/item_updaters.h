@@ -24,4 +24,11 @@ public:
     void updateItem(Item& item) override;
 };
 
+class BackStagePassesItemUpdater : public DefaultItemUpdater
+{
+public:
+    ~BackStagePassesItemUpdater() {};
+    void updateItem(Item& item) override;
+};
+
 #endif
