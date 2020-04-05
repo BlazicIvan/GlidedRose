@@ -5,10 +5,8 @@
 TEST(GildedRoseTest, Foo) {
     std::vector<Item> items;
     items.push_back(Item("Foo", 0, 0));
-    DefaultItemUpdater defaultUpdater = DefaultItemUpdater();
-    GildedRose app(items, defaultUpdater);
+    GildedRose app(items);
     app.updateQuality();
     
-    std::vector<Item>& appItems = app.getAllItems();
-    EXPECT_EQ("Foo", appItems[0].name);
+    EXPECT_EQ("Foo", app.items[0].name);
 }

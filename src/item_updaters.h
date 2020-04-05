@@ -10,18 +10,18 @@ public:
     void updateItem(Item& item) override;
 };
 
-class OldAlcoholItemUpdater : public DefaultItemUpdater
+class IncreasingQualityItemUpdater : public DefaultItemUpdater
 {
 public:
-    ~OldAlcoholItemUpdater() {};
+    ~IncreasingQualityItemUpdater() {};
     void updateItem(Item& item) override;
-}
+};
 
 class TimelessItemUpdater : public DefaultItemUpdater
 {
 public:
     ~TimelessItemUpdater() {};
     void updateItem(Item& item) override;
-}
+};
 
 #endif
