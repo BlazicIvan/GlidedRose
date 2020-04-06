@@ -31,4 +31,11 @@ public:
     void updateItem(Item& item) override;
 };
 
+class FastQualityDropItemUpdater : public DefaultItemUpdater
+{
+public:
+    ~FastQualityDropItemUpdater() {};
+    void updateItem(Item& item) override;
+};
+
 #endif

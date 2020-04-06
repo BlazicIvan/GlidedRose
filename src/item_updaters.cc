@@ -63,3 +63,25 @@ void TicketQualityUpdater::updateItem(Item& item)
       item.quality = 50;
     }
 }
+
+void FastQualityDropItemUpdater::updateItem(Item& item)
+{
+    if (item.quality > 1)
+    {
+        item.quality -= 2;
+        item.sellIn -= 1;
+        if (item.sellIn < 0 && item.quality > 1)
+        {
+            item.quality -= 2;
+        }
+        else if (item.quality <= 1)
+        {
+            item.quality = 0;
+        }
+    }
+    else
+    {
+        item.quality = 0;
+        item.sellIn -= 1;
+    }
+}
