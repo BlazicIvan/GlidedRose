@@ -1,5 +1,8 @@
 # C++ version of Gilded Rose refactoring kata - Team Saturn
 
+## Build status
+![CI](https://github.com/BlazicIvan/GlidedRose/workflows/CI/badge.svg?branch=CI-unit-tests)
+
 ## Design overview
 ![Class diagram](/doc/gilded_rose_uml.png)
 
