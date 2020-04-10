@@ -15,7 +15,7 @@ TEST(GildedRoseTest, BackStagePassesQuality50)
 {
     //arrange
     Item backstagePasses("backstagePasses", 3, 50);
-    BackStagePassesItemUpdater testUpdater;
+    TicketQualityUpdater testUpdater;
 
     //act
     testUpdater.updateItem(backstagePasses);
@@ -27,7 +27,7 @@ TEST(GildedRoseTest, BackStagePassesSellInLessThan5)
 {
     //arrange
     Item backstagePasses("backstagePasses", 3, 3);
-    BackStagePassesItemUpdater testUpdater;
+    TicketQualityUpdater testUpdater;
 
     //act
     testUpdater.updateItem(backstagePasses);
@@ -39,7 +39,7 @@ TEST(GildedRoseTest, BackStagePassesSellInLessThan10MoreThan5)
 {
     //arrange
     Item backstagePasses("backstagePasses", 7, 3);
-    BackStagePassesItemUpdater testUpdater;
+    TicketQualityUpdater testUpdater;
 
     //act
     testUpdater.updateItem(backstagePasses);
@@ -52,7 +52,7 @@ TEST(GildedRoseTest, BackStagePassesSellIn0)
 {
     //arrange
     Item backstagePasses("backstagePasses", 0, 3);
-    BackStagePassesItemUpdater testUpdater;
+    TicketQualityUpdater testUpdater;
 
     //act
     testUpdater.updateItem(backstagePasses);
@@ -64,7 +64,7 @@ TEST(GildedRoseTest, BackStagePassesSellInLessThan0)
 {
     //arrange
     Item backstagePasses("backstagePasses", -2, 3);
-    BackStagePassesItemUpdater testUpdater;
+    TicketQualityUpdater testUpdater;
 
     //act
     testUpdater.updateItem(backstagePasses);
@@ -76,7 +76,7 @@ TEST(GildedRoseTest, BackStagePassesQualityOver50)
 {
     //arrange
     Item backstagePasses("backstagePasses", 3, 49);
-    BackStagePassesItemUpdater testUpdater;
+    TicketQualityUpdater testUpdater;
 
     //act
     testUpdater.updateItem(backstagePasses);

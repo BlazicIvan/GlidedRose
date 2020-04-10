@@ -24,10 +24,10 @@ public:
     void updateItem(Item& item) override;
 };
 
-class BackStagePassesItemUpdater : public DefaultItemUpdater
+class TicketQualityUpdater : public DefaultItemUpdater
 {
 public:
-    ~BackStagePassesItemUpdater() {};
+    ~TicketQualityUpdater() {};
     void updateItem(Item& item) override;
 };
 

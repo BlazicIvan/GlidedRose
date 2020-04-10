@@ -31,7 +31,7 @@ void TimelessItemUpdater::updateItem(Item& item)
 
 }
 
-void BackStagePassesItemUpdater::updateItem(Item& item)
+void TicketQualityUpdater::updateItem(Item& item)
 {
     item.sellIn -= 1;
 
