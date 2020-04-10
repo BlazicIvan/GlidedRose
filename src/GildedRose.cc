@@ -5,6 +5,10 @@
 GildedRose::GildedRose(std::vector<Item> & items) : items(items)
 {
     mUpdaters[""] = new DefaultItemUpdater();
+    mUpdaters["Aged Brie"] = new IncreasingQualityItemUpdater();
+    mUpdaters["Sulfuras"] = new TimelessItemUpdater();
+    mUpdaters["Backstage passes"] = new TicketQualityUpdater();
+    mUpdaters["Conjured"] = new FastQualityDropItemUpdater();
 }
 
 GildedRose::~GildedRose()
